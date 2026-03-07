@@ -40,9 +40,6 @@ export default function HomePage() {
           </div>
           <div className="topbar-actions">
             <span className="pill">Mar 7 snapshot</span>
-            <button className="button button-secondary" onClick={() => window.print()}>
-              Print
-            </button>
             <a className="button button-secondary" href="#activity">
               Export report
             </a>

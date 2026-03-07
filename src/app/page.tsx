@@ -1,3 +1,5 @@
+"use client";
+
 const metrics = [
   { label: "Net revenue", value: "$128.4k", trend: "+12.8%" },
   { label: "Active users", value: "8,492", trend: "+6.2%" },
@@ -38,6 +40,12 @@ export default function HomePage() {
           </div>
           <div className="topbar-actions">
             <span className="pill">Mar 7 snapshot</span>
+            <button
+              className="button button-secondary"
+              onClick={() => typeof window !== "undefined" && window.print()}
+            >
+              Print
+            </button>
             <a className="button button-secondary" href="#activity">
               Export report
             </a>

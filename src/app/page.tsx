@@ -30,6 +30,24 @@ const activity = [
 ];
 
 export default function HomePage() {
+  const height = 160;
+  const width = 600;
+  const maxVal = 100;
+
+  const points = revenue.map((p, i) => ({
+    x: (i / (revenue.length - 1)) * width,
+    y: height - (p.value / maxVal) * (height * 0.8) - 20,
+  }));
+
+  const pathData = points.reduce((acc, p, i, a) => {
+    if (i === 0) return `M ${p.x},${p.y}`;
+    const prev = a[i - 1];
+    const cpX = prev.x + (p.x - prev.x) / 2;
+    return `${acc} C ${cpX},${prev.y} ${cpX},${p.y} ${p.x},${p.y}`;
+  }, "");
+
+  const fillPath = `${pathData} V ${height} H 0 Z`;
+
   return (
     <main className="app-shell">
       <section className="hero">
@@ -108,13 +126,29 @@ export default function HomePage() {
               </div>
               <span className="pill">$92.8k collected</span>
             </div>
-            <div className="chart" aria-label="Weekly revenue trend">
-              {revenue.map((point) => (
-                <div className="bar" key={point.day}>
-                  <div className="bar-fill" style={{ height: `${point.value}%` }} />
-                  <span className="bar-label">{point.day}</span>
-                </div>
-              ))}
+            <div className="line-chart" aria-label="Weekly revenue trend">
+              <svg className="line-chart-svg" viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="chart-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.15" />
+                    <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+                <path d={fillPath} fill="url(#chart-gradient)" />
+                <path
+                  d={pathData}
+                  fill="none"
+                  stroke="var(--accent)"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <div className="line-chart-labels">
+                {revenue.map((point) => (
+                  <span key={point.day}>{point.day}</span>
+                ))}
+              </div>
             </div>
           </article>
 

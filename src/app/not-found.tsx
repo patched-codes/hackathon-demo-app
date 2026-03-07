@@ -1,17 +1,18 @@
-"use client";
-
 import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <div className="flex h-dvh flex-col items-center justify-center space-y-2 text-center">
-      <h1 className="font-semibold text-2xl">Page not found.</h1>
-      <p className="text-muted-foreground">The page you are looking for could not be found.</p>
-      <Link prefetch={false} replace href="/dashboard/default">
-        <Button variant="outline">Go back home</Button>
-      </Link>
-    </div>
+    <main className="app-shell">
+      <section className="hero">
+        <p className="eyebrow">Not found</p>
+        <h1>That page is gone.</h1>
+        <p>This project was reduced to a single dashboard route for fast demos.</p>
+        <div className="hero-actions">
+          <Link className="button button-primary" href="/">
+            Back to dashboard
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }

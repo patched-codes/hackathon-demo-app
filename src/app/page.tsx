@@ -65,19 +65,6 @@ export default function HomePage() {
         </div>
 
         <div className="hero-grid">
-          <div className="hero-copy">
-            <h1>Revenue is pacing ahead of forecast this week.</h1>
-            <p>Expansion revenue led growth while churn stayed below plan across core accounts.</p>
-            <div className="hero-actions">
-              <a className="button button-primary" href="#metrics">
-                View metrics
-              </a>
-              <a className="button button-secondary" href="#pipeline">
-                Open pipeline
-              </a>
-            </div>
-          </div>
-
           <aside className="hero-highlight">
             <p className="eyebrow">Forecast</p>
             <span className="stat">$1.24m</span>
@@ -93,6 +80,19 @@ export default function HomePage() {
               </div>
             </div>
           </aside>
+
+          <div className="hero-copy">
+            <h1>Revenue is pacing ahead of forecast this week.</h1>
+            <p>Expansion revenue led growth while churn stayed below plan across core accounts.</p>
+            <div className="hero-actions">
+              <a className="button button-primary" href="#metrics">
+                View metrics
+              </a>
+              <a className="button button-secondary" href="#pipeline">
+                Open pipeline
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 

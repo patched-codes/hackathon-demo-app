@@ -7,7 +7,6 @@ export default function Widget() {
     import("@patchedcodes/hackathon-widget").then(({ init }) => {
       init({
         endpoint: process.env.NEXT_PUBLIC_DEVLOYED_ENDPOINT!,
-        projectId: process.env.NEXT_PUBLIC_DEVLOYED_PROJECT_ID!,
         apiKey: process.env.NEXT_PUBLIC_DEVLOYED_API_KEY!,
       });
     });

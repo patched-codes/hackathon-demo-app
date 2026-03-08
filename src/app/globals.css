@@ -1,15 +1,15 @@
 :root {
   color-scheme: light;
-  --bg: #eef2ef;
+  --bg: #f0f9ff;
   --panel: #ffffff;
-  --panel-muted: #f4f7f5;
-  --text: #122019;
-  --text-soft: #617068;
-  --line: #d5dfd9;
-  --accent: #166534;
-  --accent-soft: #e7f5ea;
-  --warn: #9a3412;
-  --ink: #0e1713;
+  --panel-muted: #f8fafc;
+  --text: #0f172a;
+  --text-soft: #475569;
+  --line: #e2e8f0;
+  --accent: #0284c7;
+  --accent-soft: #e0f2fe;
+  --warn: #1d4ed8;
+  --ink: #0c4a6e;
 }
 
 * {
@@ -24,8 +24,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, #dbece0 0, transparent 24%),
-    linear-gradient(180deg, #f7faf8 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, #e0f2fe 0, transparent 24%),
+    linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
   color: var(--text);
 }
 
@@ -48,7 +48,7 @@ a {
   border-radius: 28px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
-  box-shadow: 0 16px 40px rgba(18, 32, 25, 0.06);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
 }
 
 .eyebrow {
@@ -150,12 +150,8 @@ a {
 .hero-highlight {
   padding: 20px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #be185d 0%, #db2777 100%);
-  color: #f4f8f6;
-}
-
-.hero-highlight .eyebrow {
-  color: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+  color: #f0f9ff;
 }
 
 .hero-highlight .stat {
@@ -185,7 +181,7 @@ a {
 
 .highlight-meta span {
   font-size: 0.84rem;
-  color: rgba(244, 248, 246, 0.72);
+  color: rgba(240, 249, 255, 0.72);
 }
 
 .section {
@@ -194,7 +190,7 @@ a {
   border: 1px solid var(--line);
   border-radius: 28px;
   background: var(--panel);
-  box-shadow: 0 12px 28px rgba(18, 32, 25, 0.04);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.04);
 }
 
 .section-title {
@@ -260,7 +256,7 @@ a {
 }
 
 .pill-positive {
-  border-color: #cbe5d2;
+  border-color: #bae6fd;
   background: var(--accent-soft);
   color: var(--accent);
 }
@@ -271,28 +267,6 @@ a {
 
 .card {
   padding: 20px;
-}
-
-.line-chart {
-  margin-top: 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-height: 220px;
-}
-
-.line-chart-svg {
-  width: 100%;
-  height: 180px;
-  overflow: visible;
-}
-
-.line-chart-labels {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-soft);
 }
 
 .chart {
@@ -314,7 +288,7 @@ a {
 
 .bar-fill {
   border-radius: 18px 18px 6px 6px;
-  background: linear-gradient(180deg, #2a9d66 0%, #146c43 100%);
+  background: linear-gradient(180deg, #0ea5e9 0%, #0284c7 100%);
 }
 
 .bar-label {
@@ -371,7 +345,7 @@ a {
   margin-top: 7px;
   border-radius: 999px;
   background: var(--accent);
-  box-shadow: 0 0 0 6px rgba(22, 101, 52, 0.12);
+  box-shadow: 0 0 0 6px rgba(2, 132, 199, 0.12);
 }
 
 .activity-time {

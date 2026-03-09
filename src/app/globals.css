@@ -12,6 +12,8 @@
   --ink: #0e1713;
   --bg-grad-1: #dbece0;
   --bg-grad-2: #f7faf8;
+  --highlight-bg: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+  --button-primary-text: #ffffff;
 }
 
 [data-theme='dark'] {
@@ -28,6 +30,8 @@
   --ink: #ffffff;
   --bg-grad-1: #10261d;
   --bg-grad-2: #0e1713;
+  --highlight-bg: linear-gradient(135deg, #082f49 0%, #0c4a6e 100%);
+  --button-primary-text: #0e1713;
 }
 
 * {
@@ -157,7 +161,7 @@ a {
 
 .button-primary {
   background: var(--ink);
-  color: #fff;
+  color: var(--button-primary-text);
 }
 
 .button-secondary {
@@ -168,7 +172,7 @@ a {
 .hero-highlight {
   padding: 20px;
   border-radius: 24px;
-  background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+  background: var(--highlight-bg);
   color: #f0f9ff;
 }
 

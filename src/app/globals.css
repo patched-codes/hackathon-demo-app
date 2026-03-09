@@ -14,6 +14,7 @@
   --bg-grad-2: #f7faf8;
   --highlight-bg: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
   --button-primary-text: #ffffff;
+  --hero-bg: rgba(255, 255, 255, 0.88);
 }
 
 [data-theme='dark'] {
@@ -32,6 +33,7 @@
   --bg-grad-2: #0e1713;
   --highlight-bg: linear-gradient(135deg, #082f49 0%, #0c4a6e 100%);
   --button-primary-text: #0e1713;
+  --hero-bg: rgba(18, 32, 25, 0.88);
 }
 
 * {
@@ -68,7 +70,7 @@ a {
   padding: 28px;
   border: 1px solid var(--line);
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.88);
+  background: var(--hero-bg);
   backdrop-filter: blur(8px);
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.06);
 }

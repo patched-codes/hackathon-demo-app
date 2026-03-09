@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 const metrics = [
   { label: "Net revenue", value: "$128.4k", trend: "+12.8%" },
   { label: "Active users", value: "8,492", trend: "+6.2%" },
@@ -30,6 +32,23 @@ const activity = [
 ];
 
 export default function HomePage() {
+  const [theme, setTheme] = useState<"light" | "dark" | null>(null);
+
+  useEffect(() => {
+    const saved = localStorage.getItem("theme") as "light" | "dark" | null;
+    const preferred = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    const initial = saved || preferred;
+    setTheme(initial);
+    document.documentElement.setAttribute("data-theme", initial);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  };
+
   const height = 160;
   const width = 600;
   const maxVal = 100;
@@ -58,6 +77,13 @@ export default function HomePage() {
           </div>
           <div className="topbar-actions">
             <span className="pill">Mar 7 snapshot</span>
+            <button
+              className="button button-secondary"
+              onClick={toggleTheme}
+              aria-label="Toggle dark mode"
+            >
+              {theme === "dark" ? "Light" : "Dark"}
+            </button>
             <a className="button button-secondary" href="#activity">
               Export report
             </a>

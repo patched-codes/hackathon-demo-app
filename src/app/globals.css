@@ -1,15 +1,33 @@
 :root {
   color-scheme: light;
-  --bg: #f0f9ff;
+  --bg: #eef2ef;
   --panel: #ffffff;
-  --panel-muted: #f8fafc;
-  --text: #0f172a;
-  --text-soft: #475569;
-  --line: #e2e8f0;
-  --accent: #0284c7;
-  --accent-soft: #e0f2fe;
-  --warn: #1d4ed8;
-  --ink: #0c4a6e;
+  --panel-muted: #f4f7f5;
+  --text: #122019;
+  --text-soft: #617068;
+  --line: #d5dfd9;
+  --accent: #166534;
+  --accent-soft: #e7f5ea;
+  --warn: #9a3412;
+  --ink: #0e1713;
+  --bg-grad-1: #dbece0;
+  --bg-grad-2: #f7faf8;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: #0e1713;
+  --panel: #122019;
+  --panel-muted: #1a2e24;
+  --text: #eef2ef;
+  --text-soft: #a1b0a8;
+  --line: #2d3f35;
+  --accent: #22c55e;
+  --accent-soft: #143220;
+  --warn: #fb923c;
+  --ink: #ffffff;
+  --bg-grad-1: #10261d;
+  --bg-grad-2: #0e1713;
 }
 
 * {
@@ -24,8 +42,8 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, #e0f2fe 0, transparent 24%),
-    linear-gradient(180deg, #f8fafc 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, var(--bg-grad-1) 0, transparent 24%),
+    linear-gradient(180deg, var(--bg-grad-2) 0%, var(--bg) 100%);
   color: var(--text);
 }
 
